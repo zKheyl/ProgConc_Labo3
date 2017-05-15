@@ -56,6 +56,10 @@ public class AirportFrame extends JFrame {
 		listDep = new ArrayList<JLabel>();
 
 		JPanel panel = new JPanel(new BorderLayout());
+		
+		//mise en place des boutons pour pouvoir les utiliser plus en détails.
+		JButton jstart= new JButton("start");
+		JButton jstop = new JButton("stop");
 
 		JPanel airportPanel = new JPanel();
 		airportPanel.setLayout(new GridLayout(1, 3));
@@ -133,8 +137,11 @@ public class AirportFrame extends JFrame {
 		bouton.setLayout(new GridLayout(1, 2)); 
 		JPanel start = new JPanel();
 		JPanel stop = new JPanel();
-		start.add(new JButton("Start"));
-		stop.add(new JButton("Stop"));
+		//modification d'instanciation des boutons.
+		//start.add(new JButton("Start"));
+		//stop.add(new JButton("Stop"));
+		start.add(jstart);
+		stop.add(jstop);
 		
 		bouton.add(start);bouton.add(stop);
 		panel.add(bouton,BorderLayout.EAST);

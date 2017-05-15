@@ -2,6 +2,8 @@ package airport.com;
 import java.util.concurrent.BlockingQueue;
 //represente l'avion
 
+import javax.swing.plaf.SliderUI;
+
 public class Avion implements Runnable {
 
 	AirportFrame airportFrame;
@@ -37,7 +39,19 @@ public class Avion implements Runnable {
 	}
 
 	public void run() {
-		
+		try {
+			while(true)
+			{
+				if(position == 0)
+				{
+					position=1;
+					airArr.put(this);
+					
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
 	}
 
 	public String getCode() {
